@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.Service.Serviceproduct;
-
+import org.springframework.http.MediaType;
 import com.example.demo.model.FoodItem;
 
 
 @RestController
-@RequestMapping("/api/v1/products")
+@RequestMapping(value = "/api/v1/products", produces = MediaType.APPLICATION_JSON_VALUE)
+
 @CrossOrigin("*")
 public class ProductController{
     @Autowired
